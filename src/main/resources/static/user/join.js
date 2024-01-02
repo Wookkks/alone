@@ -1,18 +1,19 @@
-var app = new Vue({
-    el: '#join',
-    component: {},
-    template: `<h1>hello</h1>`,
-    props: [],
-    mixin: [],
-    created() {},
-    mounted() {
-
+let join = {
+    template: `
+        <div>
+            <h3>component test</h3>
+        </div>
+    `
+    ,
+    data() {
+        return {
+            signup: {
+                email: null,
+                password: null,
+            }
+        }
     },
-    data: {
+    methods: {
 
-    },
-
-    method: {
-
-    },
-})
+    }
+}

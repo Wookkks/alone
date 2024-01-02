@@ -11,24 +11,22 @@
     <form>
         <h1 class="h3 mb-3 fw-normal">회원가입</h1>
 
-        <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
+        <div class="form-floating mb-3">
+            <label for="floatingInput">이메일</label>
+            <input v-model="signup.email" type="email" class="form-control" id="floatingInput" placeholder="이메일을 입력해주세요" required>
         </div>
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
+        <div class="form-floating mb-3">
+            <label for="floatingPassword">비밀번호</label>
+            <input v-model="signup.password" type="password" class="form-control" id="floatingPassword" placeholder="비밀번호를 입력해주세요" required>
         </div>
-
-        <div class="form-check text-start my-3">
-            <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Remember me
-            </label>
+        <div class="row">
+            <div class="col text-center">
+                <button class="btn btn-primary" type="submit">회원가입</button>
+                <button class="btn btn-secondary" type="button" onclick="history.back()">취소</button>
+            </div>
         </div>
-        <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
-        <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
     </form>
-</div>
+
 <%@include file="../common/footer.jsp" %>
+</div><script type="text/javascript" src="/user/join.js"></script>
 
