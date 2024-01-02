@@ -1,16 +1,32 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 2023-12-29
-  Time: 오전 11:10
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-    <%@include file="common/header.jsp"%>
+<%@include file="common/header.jsp"%>
 
-<div class="container">
-    <h2>index페이지</h2>
+<%
+
+%>
+<div id="indexPage" class="container">
+    <h2>index</h2>
+    <h3>List</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>회원번호</th>
+            <th>이메일</th>
+            <th>이름</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 
-    <%@include file="common/footer.jsp"%>
+<%@include file="common/footer.jsp"%>
+<script type="text/javascript" src="/user/join.js"></script>
+<script type="text/javascript" src="/user/index.js"></script>
 
