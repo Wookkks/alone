@@ -22,6 +22,7 @@ $(function () {
 
     $('#btn-join').click(function (){
         let data = {
+            name: $('#name').val(),
             email: $('#email').val(),
             password: $('#password').val(),
 
@@ -30,7 +31,7 @@ $(function () {
         console.log("ajax")
         $.ajax({
             type: "POST",
-            url: "/api/user/join",
+            url: "user/join",
             data: JSON.stringify(data),
             contentType: "application/json; charset=utf-8",
             dataType: "json",

@@ -1,12 +1,35 @@
 package com.example.seo.alone.repository;
 
 import com.example.seo.alone.dto.User;
-import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Repository;
+import com.example.seo.alone.mybatis.UserMapper;
+import lombok.RequiredArgsConstructor;
 
 import java.util.List;
+import java.util.Optional;
 
-@Mapper
-public interface UserRepository {
-    List<User> findAll();
+@RequiredArgsConstructor
+public class UserRepository implements UserMapper {
+
+    private final UserMapper userMapper;
+
+    @Override
+    public User save(User user) {
+        userMapper.save(user);
+        return user;
+    }
+
+    @Override
+    public Optional<User> findById(Long id) {
+        return userMapper.findById(id);
+    }
+
+    @Override
+    public void join(User user) {
+        userMapper.join(user);
+    }
+
+    @Override
+    public List<User> findAll() {
+        return  userMapper.findAll();
+    }
 }

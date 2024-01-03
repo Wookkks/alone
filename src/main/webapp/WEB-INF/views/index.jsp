@@ -5,23 +5,25 @@
 
 %>
 <div id="indexPage" class="container">
-    <h2>index</h2>
-    <h3>List</h3>
-    <table>
+    <h2>index Page</h2>
+    <h3>User List</h3><br><br>
+    <table class="table table-striped">
         <thead>
         <tr>
-            <th>회원번호</th>
-            <th>이메일</th>
-            <th>이름</th>
+            <th scope="col">회원번호</th>
+            <th scope="col">이메일</th>
+            <th scope="col">이름</th>
         </tr>
         </thead>
 
         <tbody>
+        <c:forEach var="user" items="${users}">
         <tr>
-            <td><span></span></td>
-            <td><span></span></td>
-            <td><span></span></td>
+            <th scope="row"><span>${user.id}</span></th>
+            <td><span>${user.email}</span></td>
+            <td><span>${user.name}</span></td>
         </tr>
+        </c:forEach>
         </tbody>
     </table>
 </div>
