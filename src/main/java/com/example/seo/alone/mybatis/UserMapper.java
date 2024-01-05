@@ -8,8 +8,6 @@ import java.util.Optional;
 
 @Mapper
 public interface UserMapper {
-
-    User save(User user);
     Optional<User> findById(Long id);
     void join(User user);
     List<User> findAll();
