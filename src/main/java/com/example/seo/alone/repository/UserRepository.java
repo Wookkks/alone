@@ -13,12 +13,6 @@ public class UserRepository implements UserMapper {
     private final UserMapper userMapper;
 
     @Override
-    public User save(User user) {
-        userMapper.save(user);
-        return user;
-    }
-
-    @Override
     public Optional<User> findById(Long id) {
         return userMapper.findById(id);
     }

@@ -1,10 +1,13 @@
-const indexPage = new Vue({
+let indexPage = new Vue({
     el: '#indexPage',
     components: {
+        userList,
         join,
     },
-    data: {
-        message: 'test',
+    data() {
+       return {
+
+       }
     },
     methods: {
 

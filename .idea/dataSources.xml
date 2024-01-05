@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="maven@localhost" uuid="e9192bb9-4beb-4418-a306-cf74b92600fc">
+    <data-source source="LOCAL" name="mybatis_db@localhost" uuid="81cfa28f-95d0-46a5-a6af-7ba7083bb51c">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>$PROJECT_DIR$/src/main/resources/application.properties</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/maven?useSSL=false&amp;serverTimezone=Asia/Seoul</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/mybatis_db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
