@@ -24,7 +24,7 @@ let join = {
                 console.log("ajax")
                 $.ajax({
                     type: "POST",
-                    url: "user/join",
+                    url: "/user/join",
                     data: JSON.stringify(data),
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
