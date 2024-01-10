@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.seo.alone.mybatis.UserMapper">
+
+    <insert id="join" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO user (name, username, email, password) VALUES (#{name}, #{username}, #{email}, #{password})
+    </insert>
+
+    <select id="findAll" resultType="User">
+        SELECT * FROM user
+    </select>
+
+    <select id="idCheck" parameterType="String" resultType="integer">
+        SELECT COUNT(*) FROM user WHERE username = #{username}
+    </select>
+
+    <select id="findById" resultType="User">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
+
+    <select id="loginCheck" parameterType="User" resultType="integer">
+        SELECT COUNT(*) FROM user WHERE (username = #{username} and password = #{password})
+    </select>
+
+    <select id="logout">
+
+    </select>
+
+</mapper>

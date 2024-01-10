@@ -3,6 +3,7 @@ package com.example.seo.alone.controller;
 import com.example.seo.alone.dto.User;
 import com.example.seo.alone.service.UserService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
+@Slf4j
 public class UserController {
 
     private final UserService userService;
@@ -39,15 +41,4 @@ public class UserController {
         return "user/login";
     }
 
-//    @PostMapping("/api/user/join")
-//    public String join(@RequestBody User user) {
-//        int result = userService.join(user);
-//        System.out.println("join controller 실행됨");
-//        if(result == 1) {
-//            return "redirect:/";
-//        } else {
-//            return "/user/login";
-//        }
-//
-//    }
 }
